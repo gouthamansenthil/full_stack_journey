@@ -3,10 +3,20 @@
     <head>
         <title>Portfolio !!</title>
         <link rel="icon" type="image/png" href="assets/manager.png">
+
+        <!-- meta - data about data(i.e. tells the browser what the web page is about) Note: does not need colsing tags!-->
+        <!-- meta is used in head cuz it defines what the webpage is about before even loading the page and mainly for SEO-->
+            <meta name="description" content=" My 1st Web page">
+            <meta name="keywords" content="HTML,CSS,JS,LEARNIGN,WEB DEVELOPMENT">
+            <meta name="autor" content="Goutham">
+            <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+            <meta charset="UTF-8">  <!--Unicode transformation Format - 8bit (i.e character encoding)-->
+            <meta http-equiv="refresh" content="100"> <!-- refreshes the page every 1 sec-->
+
     </head>
-    <body style="COLOR:white;background-color:rgb(46, 193, 204);background-image:url(assets/donnie-rosie-taO2fC7sxDU-unsplash.jpg);">
+    <body style="COLOR:rgb(0, 0, 0);background-color:rgb(46, 193, 204);background-size:cover;background-position:center;background-image:url(assets/bawp-114-media-high.jpg);">
         <!--heading tags-->
-        <h1> How many players ??</h1>
+        <h1 style="padding: 20px;"> How many players ?? <img src="assets/BMW.png" width="30px" ></h1>
         <hr>
         <H1 style="color:white"> HELLO PLAYERS !!</H1>
         <H2 style="color:rgb(19, 214, 240)"> HELLO PLAYERS !!</H1>
@@ -139,6 +149,72 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
             </div>
 
-        <!-- -->
-    </body>
+        <!-- iframes 1. used to embed concnt form another source into an HTML doc
+                     2. used for Ads, used in many hacking techniques         -->
+        <h3> Iframe example :</h3>
+       <iframe width="200" height="100" src="https://www.youtube.com/embed/LURd2QCv3ZA?si=n3vMUJqB39tlr2lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; looped;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+       <!-- Button -->
+         <h3> Button example :</h3>
+         <button style="background-color: rgb(126, 119, 133); padding: 5px; border-radius: 20px; color: rgb(79, 216, 15); font-family: cursive;" type="text"   onclick="alert('Button WOrks !!!!')">Click HERE</button>
+         <a href="https://www.google.com" target="_blank"><button  style="border-radius: 20px; padding: 5px;"><img src="assets/Google__G__logo.png" width="10px" style="padding: 2px;"></button>
+            </a>
+        <button id=btn  style="background-color: rgb(255, 0, 0); padding: 5px; border-radius: 20px; color: white; font-family: cursive;" onclick=dosomething()>Log out</button>
+            <p id="change" style="font-family: cursive;"> <em>Yr are Logged in !!!!</em></p>
+    <script>
+        function dosomething(){
+        document.getElementById("change").innerHTML=" You are logged out !!!!";
+        document.getElementById("change").style.color="red";
+        document.getElementById("btn").innerHTML="Done!~";
+        }
+    </script>
+    <br><br>
+    <!--forms -->
+    <form action="action_phyp_page" method="get" style="font-family: cursive;">
+        <h2 style="font-family: cursive;">Driver Details</h2>
+        <div>
+            <label for="fname"> First Name* :</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
+        
+        </div>
+        <div>
+            <label for="lname" > Last Name* :</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+        </div>
+         <div>
+            <label for="pass" > Password* :</label>
+            <input type="password" id="pass" name="pass" placeholder="(a-z)/(A-Z)/(spl)" maxlength="20" required>
+        </div>
+        <div>
+            <label for="age" > Age* :</label>
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="Enter age" required>
+        </div>
+        <div>
+            <label for="dob" > DOB* :</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+            <label for="rank">Rank :</label>
+            <input type="range" id="rank" name="rank" min="0" max="100" >
+        </div>
+        <div>
+            <label for="bio"> Short Bio :</label>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Write something about you..."></textarea>
+        </div>
+        <div>
+            <label for="country"> Country* :</label>
+            <select id="country" name="country" required>
+                <option value="">--Select your country--</option>
+                <option value="india"> India </option>
+                <option value="usa"> USA </option>
+                <option value="uk"> UK </option>
+                <option value="australia"> Australia </option>
+                <option value="canada"> Canada </option>
+            </select>
+        </div>
+        <button type="submit"> Submit </button>
+        <button type="reset"> Reset </button>
+
+    </form>
+        </body>
 </html>
